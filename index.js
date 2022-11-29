@@ -1,43 +1,23 @@
-fetch('index.json').then ((response)=> {
-    // console.log(response);
+fetch('index.json')
+.then((response)=>{
     return response.json();
-}).then((data (function () {
-        let car1= document.getElementById().value,
-        let car2= document.getElementById().value,
-        let car3= document.getElementById().value,
-        let car4= document.getElementById().value,
-    let carCollection = {
-        cars: [BMW, Toyota , Volkswagen, Mercedes AMG ]
-    }
-    
-    for (const x of carCollection.car) {
-        document.getElementById('specs').innerHTML = '<li>' + car1 + '</li>',
-        document.getElementById('specs').innerHTML = '<li>' + car2 + '</li>',
-        document.getElementById('specs').innerHTML = '<li>' + car3 + '</li>',
-        document.getElementById('specs').innerHTML = '<li>' + car4 + '</li>',
-    }
-    
-    };
-    getCars();
-    console.log(data);
-})));
+})
+.then((data)=>{
+    let results = data.carsCollection;
+    let container = document.querySelector('.container');
+    results.forEach( (item)=> {
+        container.innerHTML += `
+            <h2>${item.make}</h2>
+            <ul>
+                <li>${item.year}</li>
+            </ul>
+            <ul>
+                <li>${item.model}</li>
+            </ul>
+            <ul>
+                <li>${item.automatic}</li>
+            </ul>
 
-
-function getCars(){
-    let car1= document.getElementById().value;
-    let car2= document.getElementById().value;
-    let car3= document.getElementById().value;
-    let car4= document.getElementById().value;
-let carCollection = {
-    cars: [BMW, Toyota , Volkswagen, Mercedes AMG ]
-}
-
-for (const x of carCollection.car) {
-    document.getElementById('specs').innerHTML = '<li>' + car1 + '</li>';
-    document.getElementById('specs').innerHTML = '<li>' + car2 + '</li>';
-    document.getElementById('specs').innerHTML = '<li>' + car3 + '</li>';
-    document.getElementById('specs').innerHTML = '<li>' + car4 + '</li>';
-}
-
-};
-getCars();
+        `
+    })
+} )
