@@ -1,28 +1,43 @@
 {
-    "carsCollection" : [
-    {
-    "make": "BMW",
-    "year": 2021,
-    "model": "M4G82",
+
+"carsCollection" : [
+
+{
+
+"make": "BMW",
+"year": 2021,
+"model": "M4G82",
+"automatic": "True"
+
+},
+
+{
+
+    "make": "Toyota",
+    "year": 2003,
+    "model": "Spyder",
     "automatic": "True"
-    },
-    {
-        "make": "Toyota",
-        "year": 2003,
-        "model": "Spyder",
-        "automatic": "True"
-    },
-    {
-        "make": "Volkswagen",
-        "year": 1976,
-        "model": "Beetle",
-        "automatic": "True"
-    },
-    {
-        "make": "Mercedes AMG",
-        "year": 2018,
-        "model": "C63",
-        "automatic": "True"
-    }
-    ]
-    }
+
+},
+
+{
+
+    "make": "Volkswagen",
+    "year": 1976,
+    "model": "Beetle",
+    "automatic": "True"
+
+},
+
+{
+
+    "make": "Mercedes AMG",
+    "year": 2018,
+    "model": "C63",
+    "automatic": "True"
+
+}
+
+]
+
+}
